@@ -39,16 +39,12 @@ public class ListaLibros
     	Libro aux1=primero;
     	Libro aux2=primero.getSiguiente();
     	
-    	boolean checked=false;//la id del elemento 1 está o no verificada
-    	
     	while (aux2!=null) {
     		
     		//verifica si la id es igual a la id del primer elemento 
-    		if(aux1.getId()==id && !checked) {
+    		if(aux1.getId()==id) {
     			
     		     primero=primero.getSiguiente();//elimina el primer elemento de la lista
-    		     
-    		     checked=true;//la id del elemento ha sido verificada
     		     
     		     return aux1;//retorna el elemento borrado
     			
@@ -60,7 +56,8 @@ public class ListaLibros
     			
     			return aux2;//retorna el elemento borrado
     			}
-    			else {
+    			else 
+    			{
     			
     				aux1=aux1.getSiguiente();
     				aux2=aux2.getSiguiente();
